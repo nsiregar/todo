@@ -1,5 +1,6 @@
 class TaskItemsController < ApplicationController
   before_action :set_task
+  before_action :set_task_item, except: [:create]
 
   def create
     @task_item = @task.task_items.create(task_item_params)
@@ -16,6 +17,11 @@ class TaskItemsController < ApplicationController
     redirect_to @task
   end
 
+  def complete
+    @task_item.update_attribute(:completed_at, Time.now)
+    redirect_to @task, notice: 'Item completed'
+  end
+
   private
 
   def set_task
@@ -24,5 +30,9 @@ class TaskItemsController < ApplicationController
 
   def task_item_params
     params[:task_item].permit(:content)
+  end
+
+  def set_task_item
+    @task_item = @task.task_items.find(params[:id])
   end
 end
