@@ -1,0 +1,10 @@
+---
+:verbose: true
+:concurrency: <%= ENV['SIDEKIQ_THREADS'] %>
+:pidfile: tmp/pids/sidekiq.pid
+:timeout: 30
+
+:queues:
+  - critical
+  - default
+  - low
