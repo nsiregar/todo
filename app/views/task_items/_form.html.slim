@@ -1,0 +1,5 @@
+= form_for [@task, @task.task_items.build] do |f|
+  .field
+    = f.text_field :content, placeholder: "New Task"
+  .actions = f.submit
+
