@@ -32,6 +32,7 @@ gem 'slim-rails'
 gem 'slim'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

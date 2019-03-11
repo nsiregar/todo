@@ -13,7 +13,7 @@ Sample ToDo app built with Rails 5.2
 - Open application in `https://localhost:5000`
 
 ### Improvement
-- [ ] Integrate with Bootstrap 4
+- [x] Integrate with Bootstrap 4
 - [ ] Create Authentication
 - [ ] Add duedate to task
 - [ ] Send notification for complete and expired task
