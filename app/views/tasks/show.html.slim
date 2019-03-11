@@ -1,16 +1,21 @@
 p#notice = notice
 
-p
+h5[class="mt-5"]
   strong Title:
-  = @task.title
 p
+  = @task.title
+
+h5
   strong Description:
+p
   = @task.description
+
 - cache @task.task_items do
-  div[id="task_item_wrapper"]
+  .item_wrapper
     == render @task.task_items
-    div[id="form"]
-      == render "task_items/form"
+
+.form-group
+  = render "task_items/form"
 
 => link_to 'Edit', edit_task_path(@task)
 '|

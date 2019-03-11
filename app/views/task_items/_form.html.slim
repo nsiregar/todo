@@ -1,5 +1,5 @@
 = form_for [@task, @task.task_items.build] do |f|
-  .field
-    = f.text_field :content, placeholder: "New Task"
-  .actions = f.submit
+  .form-group
+    = f.text_field :content, placeholder: 'Task Step', class: 'form-control', required: true
+  .actions = f.submit class: 'btn btn-primary'
 

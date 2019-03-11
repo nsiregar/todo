@@ -1,25 +1,24 @@
-h1 Listing tasks
+h1[class="mt-5"] ToDo List
 
-table
-  thead
-    tr
-      th Title
-      th Description
-      th
-      th
-      th
+.table-responsive-xl.table-striped.table-hover
+  table[class="table"]
+    thead
+      tr
+        th
+        th Title
+        th Description
+        th
 
-  tbody
-    - cache @tasks do
-      - @tasks.each do |task|
-        - cache task do
-          tr
-            td = task.title
-            td = task.description
-            td = link_to 'Show', task
-            td = link_to 'Edit', edit_task_path(task)
-            td = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete
+    tbody
+      - cache @tasks do
+        - @tasks.each do |task|
+          - cache task do
+            tr
+              td = link_to fa_icon('edit'), edit_task_path(task)
+              td = task.title
+              td = link_to task.description, task
+              td = link_to fa_icon('minus'), task, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Task', new_task_path
+= link_to 'New Task', new_task_path, class: 'btn btn-primary'
