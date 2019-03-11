@@ -3,7 +3,7 @@
 Sample ToDo app built with Rails 5.2
 
 ### Requirements
-- Docker Enginer 18.06.0+
+- Docker Engine 18.06.0+
 - docker-compose
 
 ### Running in development mode

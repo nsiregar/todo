@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   resources :tasks do
     resources :task_items do
       member do
