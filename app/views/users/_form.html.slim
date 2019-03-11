@@ -1,0 +1,19 @@
+= form_for @user, url: signup_path do |f|
+  .form-group
+    = f.label :name, class: "control-label col-lg-2"
+    = f.text_field :name, class: "form-control", required: true
+
+  .form-group
+    = f.label :email, class: "control-label col-lg-2"
+    = f.email_field :email, class: "form-control", required: true
+
+  .form-group
+    = f.label :password, class: "control-label col-lg-2"
+    = f.password_field :password, class: "form-control", required: true
+
+  .form-group
+    = f.label :password_confirmation, "Confirmation", class: "control-label col-lg-2"
+    = f.password_field :password_confirmation, class: "form-control", required: true
+
+  .actions
+    = f.submit "Create my account", class: "btn btn-primary"
